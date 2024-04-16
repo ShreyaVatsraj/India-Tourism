@@ -1,0 +1,1 @@
+SELECT `upload`.`id`, `upload`.`filename`, `register`.`username` FROM `upload` INNER JOIN `register` ON `upload`.`userid` = `register`.`id`;

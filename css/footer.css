@@ -1,0 +1,130 @@
+.section
+{
+    padding:30px 0 5px 0;
+    position: relative;
+}
+
+
+.pt-5,py-5
+{
+    padding-top: 3rem;
+}
+
+.container1 {
+    max-width: 540px;
+}
+.container1{
+    width: 100%;
+    /* padding-right: 15px;
+    padding-left: 15px; */
+    margin-right: auto;
+    margin-left: 20px;
+}
+.title
+{
+    line-height: 26px;
+    margin-bottom: 10px;
+}
+
+.title-xs
+{
+    font-size: 1.8em;
+}
+
+/* .state-tourism {
+    display: block;
+    float: left;
+    width: 100%;
+} */
+
+.footer-link-item h5.title {
+    position: relative;
+}
+.footer-nav-section h5.title {
+    color: #fff;
+}
+.footer .title {
+    font-family: 'Raleway',sans-serif;
+    font-weight: 600;
+}
+
+.footer-nav {
+    display: inline-block;
+}
+
+.list-inline {
+    padding-left: 0;
+    list-style: none;
+}
+/* dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+} */
+.footer-nav-section a {
+    position: relative;
+    padding-left: 0;
+    color: #fff;
+    line-height: 22px;
+}
+.footer-nav a, .footer p, .list-inline-item a {
+    color: #fff;
+    font-size: 1.3em;
+}
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+a:hover {color: rgb(255, 119, 0);}
+
+.footer p, .list-inline-item a {
+    color: #fff;
+    font-size: 1.3em;
+}
+
+.text-left {
+    text-align: left !important;
+}
+/* .socail-nav {
+    margin-left: -16px;
+}
+.nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+.socail-nav .nav-link {
+    padding: 0 2px;
+    font-size: 3em;
+    color: #5b5b5b;
+}
+.socail-nav .nav-link {
+    padding: 0 2px;
+} */
+
+.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+/* ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+} */
+
+

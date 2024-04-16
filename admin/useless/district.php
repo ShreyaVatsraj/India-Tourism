@@ -1,0 +1,1 @@
+<h1>redirected to district.php</h1>

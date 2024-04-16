@@ -1,0 +1,83 @@
+DROP DATABASE IF EXISTS `IndiaTourism`;
+CREATE DATABASE `IndiaTourism`;
+
+USE `IndiaTourism`;
+
+CREATE TABLE `States`
+(
+	`Id` INT PRIMARY KEY AUTO_INCREMENT,
+	`Tag` VARCHAR(50) NOT NULL,
+	`Name` VARCHAR(200) NOT NULL,
+	`Description` LONGTEXT,
+	`Path` LONGTEXT NOT NULL
+);
+
+CREATE TABLE `Cities`
+(
+	`Id` INT PRIMARY KEY AUTO_INCREMENT,
+	`Name` VARCHAR(200) NOT NULL,
+
+	`StateId` INT NOT NULL,
+	CONSTRAINT `FkStateIdInCities` FOREIGN KEY(`StateId`) REFERENCES `States`(`Id`)
+);
+
+CREATE TABLE `Places`
+(
+	`Id` INT PRIMARY KEY AUTO_INCREMENT,
+	`Name` VARCHAR(200) NOT NULL,
+
+	`CityId` INT NOT NULL,
+	CONSTRAINT `FkCityIdInPlaces` FOREIGN KEY(`CityId`) REFERENCES `Cities`(`Id`)
+);
+
+CREATE TABLE `Food`
+(
+	`Id` INT PRIMARY KEY AUTO_INCREMENT,
+	`Name` VARCHAR(200) NOT NULL,
+
+	`StateId` INT NOT NULL,
+	CONSTRAINT `FkStateIdInFood` FOREIGN KEY(`StateId`) REFERENCES `States`(`Id`)
+);
+
+CREATE TABLE `Festivals`
+(
+	`Id` INT PRIMARY KEY AUTO_INCREMENT,
+	`Name` VARCHAR(200) NOT NULL,
+
+	`StateId` INT NOT NULL,
+	CONSTRAINT `FkStateIdInFestivals` FOREIGN KEY(`StateId`) REFERENCES `States`(`Id`)
+);
+
+CREATE TABLE `Users`
+(
+	`Id` INT PRIMARY KEY AUTO_INCREMENT,
+	`Username` VARCHAR(200) NOT NULL,
+	`Password` VARCHAR(200) NOT NULL
+);
+
+CREATE TABLE `PlaceImages`
+(
+	`Id` INT PRIMARY KEY AUTO_INCREMENT,
+	`ImagePath` VARCHAR(300) NOT NULL,
+
+	`PlaceId` INT NOT NULL,
+	CONSTRAINT `FkPlaceIdInPlaceImages` FOREIGN KEY(`PlaceId`) REFERENCES `Places`(`Id`)
+);
+
+CREATE TABLE `FoodImages`
+(
+	`Id` INT PRIMARY KEY AUTO_INCREMENT,
+	`ImagePath` VARCHAR(300) NOT NULL,
+
+	`FoodId` INT NOT NULL,
+	CONSTRAINT `FkFoodIdInFoodImages` FOREIGN KEY(`FoodId`) REFERENCES `Food`(`Id`)
+);
+
+CREATE TABLE `FestivalImages`
+(
+	`Id` INT PRIMARY KEY AUTO_INCREMENT,
+	`ImagePath` VARCHAR(300) NOT NULL,
+
+	`FestivalId` INT NOT NULL,
+	CONSTRAINT `FkFestivalIdInFestivalImages` FOREIGN KEY(`FestivalId`) REFERENCES `Festivals`(`Id`)
+);
